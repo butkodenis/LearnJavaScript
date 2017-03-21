@@ -1,0 +1,28 @@
+body {
+    box-sizing: border-box;
+}
+form {
+    width: 300px;
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 10px;
+
+}
+input {
+    display: inline-block;
+    margin: 10px 0px;
+    width: 100%;
+    height: 20px;
+    /*opacity: 0.5;*/
+}
+span {
+    display: inline-block;
+    /*margin: 0 10px;*/
+    width: 100%;
+    height: 20px;
+    opacity: 0.5;
+    visibility: hidden ;
+}
+input[type= "radio"] {
+    width: 25%;
+}

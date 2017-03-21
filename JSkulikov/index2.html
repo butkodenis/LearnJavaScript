@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<div id = "content">
+    <p>
+    <a href="#"> refferense1</a>
+    <a href="#"> refferense2</a>
+    <a href="#"> refferense3</a>
+
+    </p>
+    <p>
+        <ul>
+            <li id =" list"><a href="#"> home</a> </li>
+            <li><a href="#"> about</a></li>
+            <li><a href="#"> contact</a></li>
+
+        </ul>
+    </p>
+</div>
+
+
+<script>
+    var allElem = document.querySelectorAll("a");
+    var elemById = document.getElementById("list");
+    var elemByName = document.getElementsByName("p");
+ //   allElem.style.color = "red";
+   /// elemById.style.color = "blue";
+
+    console.log(allElem);
+    console.log(elemById);
+    console.log(elemByName);
+</script>
+
+</body>
+</html>

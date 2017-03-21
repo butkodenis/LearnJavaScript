@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<div style="position: absolute; top: 50px; left: 50px; width: 200px; height:  200px; border: 3px solid black ">
+<p style="position: absolute; top: 15px; left:  15px; width:30px; height: 30px; background-color: coral"></p>
+</div>
+
+
+
+
+
+<script>
+
+var  div = document.body.firstElementChild;
+var  p = div.firstElementChild;
+ function watcher(e) {
+     console.log(e.type);
+     console.log(e.charCode);
+     console.log(e.keyCode);
+     console.log(e.shiftKey);
+//     console.log(e.target);
+//     console.log(e.relatedTarget);
+//     console.log(e.width);
+//     console.log(e.screenX + " " + e.screenY);
+
+
+ }
+//    div.onclick = watcher;
+//    div.onmousedown = watcher;
+//    div.onmouseup = watcher;
+//    div.ondblclick = watcher;
+//    div.oncontextmenu = watcher;
+//    div.onmousemove = watcher;
+//    div.onmouseenter = watcher;
+//    div.onmouseleave = watcher;
+////    div.onmouseover = watcher;
+//
+//    p.onmouseenter = watcher;
+//    p.onmouseleave = watcher;
+//
+    document.body.onkeydown = watcher;
+    document.body.onkeyup = watcher;
+    document.body.onkeypress = watcher;
+
+
+</script>
+
+</body>
+</html>
