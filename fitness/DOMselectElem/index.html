@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<script src="DOM.js"></script>-->
+</head>
+<body>
+<div class="blick">
+    <ul>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li id="list" ><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+    </ul>
+
+    <div class="cubbock">
+        <h1> Title</h1>
+        <p id="content" >this text 1</p>
+        <p id="content" > this text 2</p>
+        <p id="content" > this text 3</p>
+    </div>
+</div>
+<script>
+    var tagElem = document.getElementsByTagName("div");
+    var classElem = document.getElementsByClassName("cublock");
+    var elemId = document.getElementById("list");
+    var result = document.querySelector('p');
+    var elemSelectorAll = document.querySelectorAll("p");
+    var elemInDiv = document.querySelectorAll("div p");
+    var idElemSelector = document.querySelector("#list");
+    //
+    // elemSelector = document.querySelector("li"),
+    // elemSelectorAll = document.querySelectorAll("p"),
+    //tagElem.style.background = 'red';
+
+   // console.log(result);
+  //  console.log(elemInDiv);
+    //console.log(idElemSelector);
+//    for (var i= 0;  i < elemSelectorAll.length;  i++ ) {
+//        console.log( elemSelectorAll[i].tagName ); // выводит названеи тегов
+//        console.log( elemSelectorAll[i].nodeName ); // выводит название узла
+
+//        console.log( elemSelectorAll[i] ); //выводит все елементы из колекции
+//          console.log( elemSelectorAll[i].parentNode ); //выводит тег родителя
+//          console.log( elemSelectorAll[i].previousSibling.previousSibling); //выводит предыдущий елемент из колекции *2х потому что пробелы
+//          console.log( elemSelectorAll[i].nextSibling.nextSibling); //выводит следующий елемент из колекции *2х потому что пробелы
+//          console.log( elemSelectorAll[i].previousSibling.nodeName ); // #text
+//          console.log( elemSelectorAll[i].previousSibling.tagName ); //  undefined - пробел он же и текст , потому чо у текта нет теа
+//            console.log( elemSelectorAll[i].nodeType); // тип 1 -узел 3 - текст
+//
+
+//    }
+//    console.log( document.querySelector("div").children ); // выведет теги дочених елементов
+//    console.log( document.querySelector("div").childNodes ); // выведет все узлы дочение ( тоже что и чилдрен но с пробелами и текстами)
+//    console.log( document.querySelector("div").lastChild ); // последний елемент выбраного елемента
+//    console.log( document.querySelector("div").firstChild ); // первый елемент выбраного елемента
+    console.log( document.querySelector("#content").innerHTML ); // выводит  в лог что мы выбрали
+
+    var elementAdd = document.createElement("p"),
+        content = document.createTextNode("Это вставлено!");
+    elementAdd.appendChild(content);  // вствляем то что в созданый елемент созданый текст
+    elementAdd.setAttribute('id', 'myDinacic'); // добавить любой атрибут 1способ
+    elementAdd.className = 'myDinacic2'; // добавить любой атрибут 2способ
+    console.log(elementAdd);
+        var addP = document.querySelector("div .cubbock").appendChild(elementAdd); // выбираем div с классом cubbock и добавляем в конец елемент(переменую)
+    addP.style.color = "red";
+    addP2 =  document.querySelector("div .cubbock").getElementsByTagName("p")[2];
+    addP2.parentNode.insertBefore(elementAdd, elementAdd);
+    var elementLi = document.getElementsByTagName("li")[1];
+    elementLi.onmousedown = function () {
+        elementLi.style.backgroundColor = "red";
+    };
+    elementLi.onmouseup = function () {
+        elementLi.style.backgroundColor = "white";
+    };
+    console.log(elementLi[1]);
+
+</script>
+
+</body>
+</html>

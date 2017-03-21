@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>pyf</h1>
+<form name="form">
+    <input type="text" name="first" placeholder="введите ваше имя" maxlength="20">
+    <input type="text" name="phome" placeholder="+3 (xxx)xxxxxxx" title = "ваш телефон">
+    <input type="number" name="age" placeholder="ведите ваш возрвст" min="10" max="90">
+   <p> ваш пол</p>
+    <label><input type="radio" name="gender" value="male"> Мужской</label>
+    <label><input type="radio" name="gender" value="female" checked> Женский</label>
+    <p>ваши знания</p>
+    <select name="knowlege">
+        <option value="0">не знаю</option>
+        <option value="1">слышал</option>
+        <option value="2">немного знаю</option>
+        <option value="3">знаю</option>
+        <option value="4">работаю</option>
+
+    </select>
+    <p></p>
+    <label>jqury<input type="checkbox" name="jqury"></label>
+    <label>bootstrap<input type="checkbox" name="bootstrap"></label>
+    <input type="submit" value="submit data">
+
+
+</form>
+<p id="error"></p>
+<script>
+    var errors = document.getElementById("error");
+    var form = document.forms[0];
+//    console.log(form.elements.first);
+    form.onsubmit = function (e) {
+     e.preventDefault();
+        if (validateForm()) {
+            errors.innerHTML = "<span style='color:red '> ворма удачно отправлена </span>"
+        }
+
+       function validateForm() {
+
+       }
+//     if  (validateForm()) {
+//         this.onsubmit();
+//     }
+    }
+</script>
+</body>
+</html>
